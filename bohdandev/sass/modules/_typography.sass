@@ -1,0 +1,188 @@
+@import "../tools/mixins"
+
+
+// Vars
+$f-minion: "Minion Pro", sans-serif
+$f-avenir: "Avenir"
+
+
+@include font-face('Minion Pro', '../../fonts/MinionPro-Regular', 400, null, eot woff woff2 ttf)
+@include font-face('Minion Pro', '../../fonts/MinionPro-It', 400, italic, eot woff woff2 ttf)
+@include font-face('Minion Pro', '../../fonts/MinionPro-SemiboldIt', 600, italic, eot woff woff2 ttf)
+@include font-face('Minion Pro', '../../fonts/MinionPro-Bold', 700, null, eot woff woff2 ttf)
+@include font-face('Avenir', '../../fonts/AvenirNext-Bold', 700, null, eot woff woff2 ttf)
+@include font-face('Avenir', '../../fonts/AvenirNext-Regular', 400, null, eot svg woff woff2 ttf)
+// +font-face("BaronBold", "fonts/BaronBold")
+// +font-face("MinionPro-Regular", "fonts/MinionPro-Regular")
+// +font-face("MinionPro-SemiBoldIt", "fonts/MinionPro-SemiboldIt")
+// +font-face("MinionPro-Bold", "fonts/MinionPro-Bold")
+// +font-face("MinionPro-It", "fonts/MinionPro-It")
+
+
+
+// Base
+html, body
+	font-size: 24px
+	line-height: 1.4
+	font-family: $f-minion
+	color: $black
+	//overflow-x: hidden
+// Styles
+strong
+	font-weight: bold
+%mark, mark
+	background: transparent
+	position: relative
+%mark:before, mark:before
+	content: ''
+	position: absolute
+	height: 38px
+	top: 50%
+	transform: translateY(-50%)
+	left: -3px
+	right: -3px
+	bottom: 0
+	border-radius: 4px
+	display: inline-block
+	font-weight: 600
+	font-style: italic
+	background-color: $yellow
+	font-weight: italic
+	z-index: -1
+
+a
+	text-decoration: none
+	display: block
+	color: inherit
+	overflow: hidden
+	&:hover
+		img
+			transform: scale(1.05)
+	img
+		transition: transform .3s ease-in-out
+		@extend %shadow
+a:has(>img)
+	overflow: hidden
+.link, %link
+	font-weight: 600
+	font-style: italic	
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	@extend %underlined
+	&:after
+		display: inline-block
+		content: ''
+		width: 12px
+		height: 10px
+		background: url("dist/img/arrow.svg") center center no-repeat
+		margin-left: 8px
+		transition: .3s
+	&:hover
+		&:after
+			transform: translateX(3px)
+
+// %link-left
+// 	display: inline-block
+// 	font-weight: 600
+// 	font-style: italic
+// 	position: relative
+// 	@extend %underlined
+// 	&:before
+// 		display: inline-block
+// 		content: ''
+// 		width: 12px
+// 		height: 10px
+// 		background: url("dist/img/arrow.svg") center center no-repeat
+// 		margin-right: 8px
+// 		transition: .3s
+// 		transform: rotate(180deg)
+// 	&:hover
+// 		&:before
+// 			transform: rotate(180deg) translateX(3px)
+
+
+// Styles
+
+h1
+	font-family: $f-avenir
+
+%h1, .h1
+	font-family: $f-avenir
+	font-weight: bold
+	font-size: 64px
+	line-height: 1.15
+	@media only screen and (max-width: 600px)
+		font-size: 50px
+%h2, .h2
+	@extend %h1
+	font-size: 44px
+	line-height: 1.2
+	@media only screen and (max-width: 600px)
+		font-size: 40px
+
+%h3, .h3
+	font-size: 34px
+	line-height: 1.2
+	font-weight: bold
+
+%underlined
+	background-repeat: no-repeat
+	background-size: 0 100%
+	background-position: left 0 bottom 0
+	transition: background-size .5s
+	background-image: linear-gradient(transparent calc(100% - 2px), $black calc(100% - 2px), $black 100%)
+	// @for $i from 1 through length($categories)
+	// 	.category-#{nth($categories, $i)} &
+	// 		background-image: linear-gradient(transparent calc(100% - .4em), nth($secondary, $i) .4em)
+	&:hover,
+	&.active
+		background-size: 100% 100%
+%text-pivoted,
+.text-pivoted
+	position: absolute
+	bottom: 0
+	left: -60px
+	text-transform: uppercase
+	transform-origin: left bottom
+	transform: rotate(-90deg)
+	@media only screen and (max-width: 950px)
+		left: -20px
+.text-center
+	text-align: center
+.formatted
+	p,
+	ul
+		margin-bottom: 24px
+	em
+		font-style: italic
+		font-weight: 600
+	a
+		position: relative
+		@extend %mark
+		text-decoration: underline
+	h2
+		@extend %h3
+		margin-bottom: 24px
+	h3
+		font-weight: bold
+		margin-bottom: 8px
+		margin-top: 32px
+	& > *:first-child
+		margin-top: 0
+		
+	& > *:last-child
+		margin-bottom: 0
+	li:before
+		content: ''
+		display: inline-block
+		width: 6px
+		height: 6px
+		border-radius: 6px
+		vertical-align: baseline
+		transform: translateY(-4px)
+		margin-right: 8px
+		background-color: currentColor		
+	a:first-child:last-child
+		background-color: transparent
+		padding: 0

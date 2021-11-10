@@ -1,0 +1,128 @@
+
+.homepage-intro__title
+	@extend %h1
+	font-size: 45px
+	padding: 0 40px
+	margin-bottom: -110px
+	z-index: 2
+	position: relative
+	span, u
+		font-style: italic
+		font-weight: 400
+
+.homepage-intro__body
+	padding: 0 var(--container-padding)
+	max-width: 1150px
+	margin-left: auto
+	margin-right: auto
+	display: grid
+	grid-template-columns: 1fr 392px 1fr 
+	grid-template-rows: 1fr 1fr
+	grid-column-gap: calc(var(--gap)*8)
+	grid-template-areas: '. image bloc2' 'bloc1 image bloc3'
+										
+
+.homepage-intro__image
+	position: relative
+	z-index: 1
+	grid-area: image
+	//max-width: 300px
+	align-self: end
+	justify-self: center
+	&:before
+		content: ''
+		position: absolute
+		width: 126px
+		height: 267px
+		background: url("../../dist/img/homepage-intro/abstract.png") center center no-repeat
+		position: absolute
+		top: -210px
+		right: -8px
+	// grid-column: 2
+	// grid-row: 1 / span 2
+	
+.homepage-intro__content.is-1
+	grid-area: bloc1
+	// grid-row: 2
+	align-self: end
+	@media only screen and (min-width: 720px)
+		padding-right: 20px
+.homepage-intro__content.is-2
+	grid-area: bloc2
+	// grid-row: 1
+	// grid-column: 3
+	text-align: right
+.homepage-intro__content.is-3
+	grid-area: bloc3
+	// grid-row: 2
+	// grid-column: 3
+	align-self: end
+	text-align: right
+
+@media screen and (min-width: 900px)
+	.homepage-intro__title
+		font-size: 60px
+		max-width: 620px
+		margin-bottom: 32px
+
+@media screen and (max-width: 1050px)
+	.homepage-intro__body
+		max-width: 550px
+		grid-template-columns: 392px 1fr
+		grid-template-rows: 1fr auto
+		grid-gap: 64px
+		grid-template-areas: 'bloc1 image' 'bloc2 bloc3'
+
+@media screen and (max-width: 900px)
+	.homepage-intro__title
+		margin-bottom: 32px
+		max-width: 400px
+	.homepage-intro__body
+		grid-template-columns: 1fr
+		grid-template-rows: 1fr auto
+		grid-gap: 32px
+		grid-template-areas: 'bloc1' 'image' 'bloc2' 'bloc3'
+	.homepage-intro__content
+		text-align: left!important
+	img.homepage_drawing
+		display: none!important
+@media screen and (max-width: 660px)
+	.homepage-intro__title
+		margin-top: 64px
+
+
+// Footer
+
+.homepage-footer_title
+	@extend %h2
+	margin-bottom: 1em
+	position: relative
+	max-width: 480px
+	
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: 227px
+		height: 310px
+		top: -160px
+		right: -185px
+		background: url("../../dist/img/homepage-footer/abstract_footer.png") center center no-repeat
+		background-size: contain
+		z-index: -10
+	@media only screen and (min-width: 720px)
+		padding-top: 160px
+		&:after
+			top: 0
+
+
+.homepage-footer a
+	@extend %link
+	text-decoration: none
+	&:before, &:after
+		display: none
+		background: transparent!important
+
+@media only screen and (min-width: 720px)
+	.homepage-footer .grid2 > *:last-child
+		text-align: right

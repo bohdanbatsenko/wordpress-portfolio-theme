@@ -1,0 +1,53 @@
+
+// Variables CSS
+$yellow: #FFE1AD
+$black: #06070B
+$gap: 8px
+
+--root
+	--gap: #{$gap}
+	--container-padding: #{3 * $gap}
+	position: relative
+	// @include up(700) 
+	// 	--container-padding: #{6 * $gap}
+	// @include up(1000) 
+	// 	--container-padding: #{8 * $gap}
+	// @media screen and (min-width: 30em)
+	@media screen and (min-width: 700px)
+		--container-padding: #{6 * $gap}
+	@media screen and (min-width: 1000px)
+		--container-padding: #{8 * $gap}
+::selection
+	background: $yellow
+	
+
+body
+	//overflow-x: hidden
+// Tools
+@import "tools/mixins"
+@import "tools/reset"
+
+
+// Modules
+@import "modules/typography"
+@import "modules/shadow"
+@import "modules/spacing"
+@import "modules/wordpress"
+@import "modules/blocs"
+@import "modules/grid"
+@import "modules/pagination"
+@import "modules/animation"
+
+// Parts
+@import "parts/page"
+@import "parts/header"
+@import "parts/homepage"
+@import "parts/case-studies"
+@import "parts/illustrations"
+@import "parts/mosaic"
+@import "parts/image"
+@import "parts/video"
+@import "parts/projects"
+@import "../../dev-gulp/node_modules/@fancyapps/ui/dist/fancybox.css"
+@import "../../dev-gulp/node_modules/aos/dist/aos.css"
+

@@ -1,0 +1,36 @@
+// .blocs
+// 	margin-top: 64px
+// 	padding: 0 10px
+
+.blocs + .blocs
+
+	margin-top: 100px
+
+.blocs > * + *
+	//margin-top: 100px
+
+.home .blocs > * + *
+	margin-top: 150px
+.bloc
+	padding-top: 100px
+
+%bloc-colored
+	padding-top: 100px
+	padding-bottom: 100px
+	margin-left: calc(24px * -1)
+	margin-right: calc(24px * -1)
+	padding-left: 24px
+	padding-right: 24px	
+	& + %bloc-colored
+		padding-top: 0
+		margin-top: -1px
+		border-top: 0	
+.bloc.is-black
+	background: $black
+	color: #fff
+	@extend %bloc-colored
+.bloc.is-grey
+	background-color: #FAFBFD
+	//background-color: #979797
+	@extend %bloc-colored
+	border-bottom: 1px solid #979797

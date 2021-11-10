@@ -1,0 +1,87 @@
+ul.projects__list
+	list-style-type: none
+	margin-top: 100px
+	//margin: 0
+	padding: 0
+	width: 100%
+	position: relative
+	.project__list-item
+		display: list-item
+		.project-item
+			position: relative
+			border-top: 1px solid #8c8c8c
+			.project-item__link
+				position: relative
+				display: block
+				overflow: hidden
+				padding-top: 82px
+				padding-bottom: 82px
+				@media (max-width: 768px)
+					padding: 40px 0
+				.focus-visible:focus
+					outline: 0
+					.portfolio-item__bg
+						opacity: 1
+						transform: scaleY(1)
+					.project-item__theme,
+					.project-item__title
+						color: #fff
+				@media (min-width: 1025px)
+					&:hover
+						.project-container
+							background: rgba(0,0,0,.5)
+							transform: translateY(0)
+							transition: background .3s ease-in-out
+						.project-item__bg
+							opacity: 1
+							transform: scaleY(1)
+						.project-item__theme,
+						.project-item__title
+							color: #fff!important
+				.project-item__bg
+					content: ''
+					position: absolute
+					left: 0
+					top: 0
+					overflow: hidden
+					width: 100%
+					height: 100%
+					background-position: center
+					background-size: 100%
+					background-repeat: no-repeat
+					opacity: 1
+					transform: translateY(-100%)
+					transition: transform .5s cubic-bezier(0.77, 0.125, 0.265, 1.04), opacity 0.5s cubic-bezier(0.77, 0.125, 0.265, 1.04)
+					will-change: transform
+					pointer-events: none
+				.project-container
+					position: relative
+					z-index: 5px
+					max-width: 1024px
+					padding: 15px 10px
+					margin: 0 auto
+					.project-item__theme
+						display: inline-block
+						margin-bottom: 5px
+						font-weight: 400
+						font-size: 20px
+						line-height: 27px
+						color: #000
+						transition: color .3s ease-in-out .2s
+						@media (max-width: 768px)
+							margin-bottom: 10px
+							font-size: 18px
+							line-height: 24px
+					.project-item__title
+						margin: 0
+						font-weight: 400
+						font-size: 68px
+						line-height: 93px
+						color: #000
+						transition: color 0.3s ease-in-out 0.2s
+						@media (max-width: 768px)
+							font-size: 55px
+							line-height: 70px
+						@media (max-width: 576px)
+							font-size: 34px
+							line-height: 50px

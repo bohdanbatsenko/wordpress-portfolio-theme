@@ -1,0 +1,55 @@
+$space: 8px
+
+body
+	padding: 100px var(--container-padding)
+	position: relative
+	width: 100%
+.wrapper
+	max-width: 100%
+	width: 100%
+	position: relative
+	min-width: 320px
+	position: relative
+	height: 100%
+	min-height: 100%
+	@media screen and (max-width: 768px)
+		overflow-x: hidden
+
+.container
+	//padding-left: var(--container-padding)
+	//padding-right: var(--container-padding)
+	padding: 15px 20px
+	max-width: 1024px
+	//max-width: calc(1024px + 2 * var(--container-padding))
+	margin-left: auto
+	margin-right: auto
+	position: relative
+
+// @function space($i)
+// 	@return calc(var(--gap) * #{$i})
+
+	@function $space($i) 
+	@return calc(#{$gap} * #{$i})
+
+
+
+@each $i in 1, 2, 3, 4, 6
+	.mb-#{$i}
+		margin-bottom: $space *$i
+	.mt-#{$i}
+		margin-top: $space *$i
+
+
+.ratio
+	width: 100%
+	padding-bottom: 56.25%
+	position: relative
+	height: 0
+	iframe
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		width: 100%
+		height: 100%

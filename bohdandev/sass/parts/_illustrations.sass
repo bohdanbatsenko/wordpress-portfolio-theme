@@ -1,0 +1,78 @@
+
+// Homepage	
+.illustrations__title
+	@extend %h2
+	margin-bottom: 1em
+.illustrations
+	display: grid
+	grid-template-columns: 1fr
+	grid-gap: 24px
+	text-align: right
+.illustrations__image
+	height: 0
+	padding-bottom: 100%
+	position: relative
+	overflow: hidden
+.illustrations__image img
+	object-fit: cover
+	display: block
+	position: absolute
+	height: 100%
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+
+@media only screen and (min-width: 900px)
+	.illustrations
+		grid-template-columns: 232fr 232fr 487fr
+	.illustrations__image:nth-child(2)
+		grid-column: 1 /span 2
+		grid-row-start: 1
+	// .illustrations__image:nth-child(3)
+	// 	grid-column-start: 1 / span 2
+
+	.illustrations__image:nth-child(4)
+		//grid-column-start: 1 / span 2
+		padding-bottom: 143%
+
+	// .illustrations__image:nth-child(5)
+	// 	grid-column-start: 1 / span 2
+
+// End Of illustrations hmepage
+
+
+
+// Archive
+.illustration
+	padding-left: 24px
+	position: relative
+	a
+		img
+			height: 100%
+
+
+.illustration__title
+	font-weight: bold
+	margin-bottom: 32px
+
+.illustration + .illustration
+	margin-top: 64px
+	
+.illustration__date
+	position: absolute
+	left: -20px
+	top: 60px
+	transform-origin: 0 0
+	transform: rotate(-90deg) translateX(-100%)
+	@media only screen and (max-width: 700px)
+		left: -45px
+
+
+
+
+//single-illustration
+.single-post-heading h2
+	font-size: 32px
+	margin-top: 24px
+	margin-bottom: 32px
