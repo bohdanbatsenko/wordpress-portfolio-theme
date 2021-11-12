@@ -22,7 +22,7 @@ get_header(); ?>
 		<?php if( get_row_layout() == '2columns' ): ?>
 				<?php
 							$color = get_sub_field('color');
-							//$label = the_sub_field('label');
+
 					?>
 					<div class="bloc is-<?php echo $color; ?>">			
 					<div class="grid2 container">
