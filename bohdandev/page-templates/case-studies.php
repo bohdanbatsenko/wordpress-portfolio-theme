@@ -87,7 +87,7 @@ get_header(); ?>
 								}
 							} ?>				
 					<?php $image = get_sub_field( 'image' ); ?>
-					<!--?php $title = the_title(); ?-->
+
 
 					<div 
 					data-aos="fade-up" 
