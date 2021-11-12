@@ -77,7 +77,7 @@ get_header(); ?>
 								?>
 						<?php
 							$terms = get_the_terms( $post->ID , 'case-study-type' );
-							if (is_array($term) || is_object($terms))
+							if (is_array($terms) || is_object($terms))
 							{
 								$i = 0;
 								foreach ( $terms as $term ) {
