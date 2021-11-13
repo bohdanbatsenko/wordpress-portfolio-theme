@@ -71,9 +71,9 @@ get_header(); ?>
 						if( $post_object ): ?>
 								<?php // override $post
 								$post = $post_object;
-								//foreach( $post_object as $post):
+
 								setup_postdata( $post );
-							//	$terms = get_the_terms( $post->ID, 'case-study-type' );
+						
 								?>
 						<?php
 							$terms = get_the_terms( $post->ID , 'case-study-type' );

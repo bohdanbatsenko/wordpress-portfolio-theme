@@ -97,8 +97,34 @@ class="container">
 				style="background-image: url(<?php bloginfo('template_url'); ?>/dist/img/projects/globalyouth.jpg")>
 				</div>
 				<div class="project-container">
-					<span class="project-item__theme">Corporate website</span>
+					<span class="project-item__theme">NGO website</span>
 					<h3 class="project-item__title">Global Youth Community</h3>
+				</div>
+			</a>
+		</article>
+	</li>
+	<li class="project__list-item">
+		<article class="project-item">
+			<a href="http://worldcamp.com.ua/" target="_blank" class="project-item__link">
+				<div class="project-item__bg" 
+				style="background-image: url(<?php bloginfo('template_url'); ?>/dist/img/projects/worldcamp_slide.jpg")>
+				</div>
+				<div class="project-container">
+					<span class="project-item__theme">NGO website</span>
+					<h3 class="project-item__title">World Camp Ukraine</h3>
+				</div>
+			</a>
+		</article>
+	</li>
+	<li class="project__list-item">
+		<article class="project-item">
+			<a href="http://gnc.org.ua/" target="_blank" class="project-item__link">
+				<div class="project-item__bg" 
+				style="background-image: url(<?php bloginfo('template_url'); ?>/dist/img/projects/gnc.jpg")>
+				</div>
+				<div class="project-container">
+					<span class="project-item__theme">NGO website</span>
+					<h3 class="project-item__title">Good News Corps Ukraine</h3>
 				</div>
 			</a>
 		</article>
@@ -110,8 +136,34 @@ class="container">
 				style="background-image: url(<?php bloginfo('template_url'); ?>/dist/img/projects/uff.jpg")>
 				</div>
 				<div class="project-container">
-					<span class="project-item__theme">Corporate website</span>
+					<span class="project-item__theme">NGO website</span>
 					<h3 class="project-item__title">Ukrainian Family Foundation</h3>
+				</div>
+			</a>
+		</article>
+	</li>
+	<li class="project__list-item">
+		<article class="project-item">
+			<a href="http://mamshkola.com.ua/" target="_blank" class="project-item__link">
+				<div class="project-item__bg" 
+				style="background-image: url(<?php bloginfo('template_url'); ?>/dist/img/projects/mamshkola.jpg")>
+				</div>
+				<div class="project-container">
+					<span class="project-item__theme">NGO website</span>
+					<h3 class="project-item__title">Мамина школа</h3>
+				</div>
+			</a>
+		</article>
+	</li>
+	<li class="project__list-item">
+		<article class="project-item">
+			<a href="http://cantata.in.ua/" target="_blank" class="project-item__link">
+				<div class="project-item__bg" 
+				style="background-image: url(<?php bloginfo('template_url'); ?>/dist/img/projects/cantata.jpg")>
+				</div>
+				<div class="project-container">
+					<span class="project-item__theme">NGO website</span>
+					<h3 class="project-item__title">Christmas Cantata</h3>
 				</div>
 			</a>
 		</article>
